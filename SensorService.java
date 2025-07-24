@@ -56,8 +56,8 @@ public class SensorService extends Service implements SensorEventListener {
             return START_NOT_STICKY;
         }
 
-        sensorManager.registerListener(this, accel, SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this, gyro, SensorManager.SENSOR_DELAY_NORMAL);
+        sensorManager.registerListener(this, accel, SensorManager.SENSOR_DELAY_FASTEST);
+        sensorManager.registerListener(this, gyro, SensorManager.SENSOR_DELAY_FASTEST);
 
         Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setContentTitle("Sensor Logger")
