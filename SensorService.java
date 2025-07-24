@@ -34,6 +34,10 @@ public class SensorService extends Service implements SensorEventListener {
     public void onCreate() {
         super.onCreate();
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        // raww
+        //accel = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER_UNCALIBRATED);
+        //gyro = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER_UNCALIBRATED);
+        // ones that make sense across different phones
         accel = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         gyro = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
     }
